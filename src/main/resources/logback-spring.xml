@@ -2,6 +2,7 @@
 
 <configuration debug="false">
 
+
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
     <!--<property name="LOG_HOME" value="/Users/yuan/logs/eureka-server-1111"/> &lt;!&ndash; docker容器中配置日志路径&ndash;&gt;-->
     <!--<property name="LOG_HOME" value="/Users/yuan/log/eureka-server-1112"/>-->
@@ -17,6 +18,7 @@
 
     <!-- 按照每天生成日志文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--<File>${LOG_PATH}/eureka-server.log</File>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名-->
             <FileNamePattern>${LOG_PATH}/eureka-server.%d{yyyy-MM-dd}.log</FileNamePattern>
